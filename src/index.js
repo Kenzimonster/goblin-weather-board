@@ -42,39 +42,39 @@ function formatDayTime(date) {
   return `${day} ${hour}:${minute}`;
 }
 
-function citySearch(event) {
-  event.preventDefault();
-  function apiQuery(response) {
-    let currentTemp = Math.round(response.data.temperature.current);
-    let newTemp = document.querySelector("#current-temperature-value");
-    newTemp.innerHTML = currentTemp;
-
-    let newHumidity = document.querySelector("#current-city-humidity");
-    newHumidity.innerHTML = response.data.temperature.humidity;
-
-    let newWindspeed = document.querySelector("#current-city-windspeed");
-    newWindspeed.innerHTML = response.data.wind.speed;
-
-    let newDescription = document.querySelector("#current-city-description");
-    newDescription.innerHTML = response.data.condition.description;
-
-    let cityElement = document.querySelector("#current-city");
-    cityElement.innerHTML = response.data.city;
-  }
-  let searchInputElement = document.querySelector("#search-input");
-  let city = searchInputElement.value.toLowerCase().trim();
-  let apiKey = `3at0foeb77eba84a5c21cf21f38b13e9`;
-  let searchLink = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
-
-  axios.get(searchLink).then(apiQuery);
-
+function changeInfo(response) {
   let now = new Date();
+  let currentTemp = Math.round(response.data.temperature.current);
+  let newTemp = document.querySelector("#current-temperature-value");
+  let newHumidity = document.querySelector("#current-city-humidity");  
+ let newDescription = document.querySelector("#current-city-description");
+ let newWindspeed = document.querySelector("#current-city-windspeed");
+  let cityElement = document.querySelector("#current-city");
   let descriptionDayTime = document.querySelector("#day-time");
-  descriptionDayTime.innerHTML = formatDayTime(now);
   let topDate = document.querySelector("#date-top");
+  newTemp.innerHTML = currentTemp;
+  newHumidity.innerHTML = response.data.temperature.humidity;
+  newWindspeed.innerHTML = response.data.wind.speed;
+  newDescription.innerHTML = response.data.condition.description;
+  cityElement.innerHTML = response.data.city;
+  descriptionDayTime.innerHTML = formatDayTime(now);
   topDate.innerHTML = formatTopDate(now);
+}
+
+function handleSearchSubmit(event){
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-input");
+  citySearch(searchInput.value.toLowerCase().trim());
+}
+
+function citySearch(city) {
+  let apiKey = `3at0foeb77eba84a5c21cf21f38b13e9`;
+  let apiLink = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+  axios.get(apiLink).then(changeInfo);
 }
 
 //Calls and Interaction
 let changeCity = document.querySelector("#city-search");
-changeCity.addEventListener("submit", citySearch);
+changeCity.addEventListener("submit", handleSearchSubmit);
+
+citySearch("brisbane");
