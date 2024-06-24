@@ -3,13 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css"/>
     <title>Gobiln Weather Board</title>
   </head>
   <body>
-    <header>
+    <section>
+     <header>
+      <img src="images/placeholder.png" alt="Weather Goblin Icon">
       <h1>Dat Goblin Weather Board⛅</h1>
-    </header>
-    <footer>
+      <form>
+        <input type="search" place holder="pick a city" required />
+        <input type="submit" value="find da weather" />
+      </form>
+      </header>
+      <div class="currentWeather">
+        <div>
+          <h2>City Name</h2>
+          <p>
+            Sunday 00:00, "weather description" <br/>
+           Humidity:00%, Wind: 00km/h
+          </p>
+        </div>
+        <div class="currentTemp">
+          ☀ 24°C
+        </div>
+      </div>
+      <ul class="forecast">
+        <li>Mon☀<br />7°c-21°c</li>
+        <li>Tue🌤<br />7°c-22°c</li>
+        <li>Wed🌤<br />7°c-22°c</li>
+        <li>Thu☀<br />7°c-22°c</li>
+        <li>Fri☀<br />6°c-21°c</li>
+        <li>Sat☀<br />5°c-21°c</li>
+      </ul>
+    </section>
+    <footer class="authorLinks">
       <p>
         coded by
         <a href="https://github.com/Kenzimonster" target="_blank">Kenzi</a>
@@ -20,4 +48,5 @@
       </p>
     </footer>
   </body>
+  <script src="src/index.js"></script>
 </html>
