@@ -7,34 +7,37 @@
     <title>Gobiln Weather Board</title>
   </head>
   <body>
-    <section>
+    <section class="messageBoard">
      <header>
-      <img src="images/placeholder.png" alt="Weather Goblin Icon">
-      <h1>Dat Goblin Weather Board⛅</h1>
-      <form>
-        <input type="search" place holder="pick a city" required />
-        <input type="submit" value="find da weather" />
-      </form>
+        <img src="src/images/placeholder.png" alt="Weather Goblin Icon" class="icon">
+       <h1>Dat Goblin Weather Board⛅</h1>
+        <form>
+          <span class="dateTop" class="dateTop" id="date-top">month 00, year</span>
+          <input type="search" placeholder="pick a city" required class="searchBar" id="search-bar"/>
+          <input type="submit" value="find da weather" class="searchButton" id="search-button" />
+        </form>
       </header>
       <div class="currentWeather">
         <div>
-          <h2>City Name</h2>
-          <p>
-            Sunday 00:00, "weather description" <br/>
-           Humidity:00%, Wind: 00km/h
+          <h2 class="currentCity" id="current-city">City Name</h2>
+          <p class="currentWeatherDescription">
+            <span id="day-time">Sunday 00:00</span>,  <span id="current-city-description">"weather description"</span><br/>
+           Humidity:<span class="currentHumidity" id="current-city-humidity">00</span>%, Wind: :<span class="currentWindspeed" id="current-city-windspeed">00</span>km/h
           </p>
         </div>
         <div class="currentTemp">
-          ☀ 24°C
+          <div class="currentTempIcon" id="current-temp-icon">☀</div>
+          <div class="currentTempValue" id="current-temperature-value">00</div>
+          <div class="currentTempUnit">°C</div>
         </div>
       </div>
       <ul class="forecast">
-        <li>Mon☀<br />7°c-21°c</li>
-        <li>Tue🌤<br />7°c-22°c</li>
-        <li>Wed🌤<br />7°c-22°c</li>
-        <li>Thu☀<br />7°c-22°c</li>
-        <li>Fri☀<br />6°c-21°c</li>
-        <li>Sat☀<br />5°c-21°c</li>
+        <li>Mon☀<br />1°c-11°c</li>
+        <li>Tue🌤<br />2°c-12°c</li>
+        <li>Wed🌤<br />3°c-13°c</li>
+        <li>Thu☀<br />4°c-14°c</li>
+        <li>Fri☀<br />5°c-15°c</li>
+        <li>Sat☀<br />6°c-16°c</li>
       </ul>
     </section>
     <footer class="authorLinks">
@@ -43,7 +46,7 @@
         <a href="https://github.com/Kenzimonster" target="_blank">Kenzi</a>
         and open-sourced on
         <a href="https://github.com/Kenzimonster/goblin-weather-board" target="_blank">GitHub</a>
-          and hosted on
+        and hosted on
         <a href="https://goblin-weather-board.netlify.app" target="_blank">Netlify</a>
       </p>
     </footer>
