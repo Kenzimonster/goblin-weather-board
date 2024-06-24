@@ -6,9 +6,10 @@ body{
 section {
   background-color: rgb(228, 199, 224);
   border-radius: 15px;
-  margin: 40px 10px 20px 10px;
+  margin: 20px auto;
+  max-width:1400px;
   padding: 30px 30px 10px 30px;
-}
+  }
 header{
   display: flex;
   justify-content: space-evenly;
@@ -22,11 +23,11 @@ h1{
 }
 
 .icon{
-  position: relative;
- left: 20px;
+  border-radius: 50%;
+  left: 5px;
   max-width: 100px;
   margin: 20px auto;
-  border-radius: 50%;
+  position: relative;
 }
 
 .headerLeftCollum{
@@ -44,7 +45,7 @@ h1{
   color: #27204478;
   font-size: 16px;
   padding: 10px;
-  width: 75%;
+  width: 71%;
 }
 
 .searchButton {
@@ -56,6 +57,7 @@ h1{
   margin-left: 5px;
   padding: 10px;
   transition: all 150ms ease-in-out;
+  width:23%;
 }
 
 .searchButton:hover {
@@ -70,9 +72,9 @@ div.searchBar {
 .dateTop {
   color: #272044;
   right: 50px;
-  opacity: 0.8;
   max-width: 25%;
   min-width:125px;
+  opacity: 0.8;
   text-align: center;
 }
 
