@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap" rel="stylesheet"/>
@@ -18,7 +19,7 @@
         </div>  
         <div class="headerRghtCollum">
         <h1>Goblin Weather Board</h1>          
-        <form>
+        <form id="city-search">
           <div class="searchBar">
             <input type="search" placeholder="pick a city" required class="searcInput" id="search-input"/>
             <input type="submit" value="find da weather" class="searchButton" id="search-button" />
@@ -60,6 +61,6 @@
        </p>
       </footer> 
     </section>
+    <script src="src/index.js"></script>
   </body>
-  <script src="src/index.js"></script>
 </html>
