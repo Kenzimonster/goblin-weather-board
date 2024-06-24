@@ -1,7 +1,7 @@
 body{
   background-color:#a896d8 ;
   font-family: "Alkatra", system-ui;
-  min-width: 650px;
+  min-width: 600px;
 }
 section {
   background-color: rgb(228, 199, 224);
@@ -125,8 +125,13 @@ div.searchBar {
 .forecast {
   color: #272044;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
+}
+
+.forecastInner{
+  min-width: 200px;
 }
 
 .forecastDate{

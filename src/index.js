@@ -101,8 +101,8 @@ function displayForecast(response){
     if (index <6){
       forecastHtml =  forecastHtml +
       `
-        <div class=""row>
-        <div class="col-2">
+       
+        <div class="forecastInner">
           <div class="forecastDate">
             ${formatDay(day.time)}
           </div>
@@ -112,7 +112,7 @@ function displayForecast(response){
               <span class="forecastTemperatureMin">${Math.round(day.temperature.minimum)}°</span>
           </div>
         </div>
-      </div>
+    
       `;
    }
   }); 
