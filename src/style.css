@@ -120,18 +120,26 @@ div.searchBar {
   font-size: 30px;
 }
 
-ul.forecast {
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: row wrap;
+.forecast {
+  color: #272044;
   font-size: 20px;
-  justify-content: space-evenly;
-  list-style: none;
+  text-align: center;
 }
 
-ul.forecast li {
-  min-width: 150px;
-  text-align: center;
+.forecastDate{
+  opacity: 0.7;
+}
+
+.forecastTemperatureMax{
+  opacity: 0.8;
+}
+
+.forecastCondition{
+  width: 70px;
+}
+
+.forecastTemperatureMin{
+  opacity: 0.5;
 }
 
 .authorLinks {
