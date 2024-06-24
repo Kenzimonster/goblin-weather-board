@@ -122,7 +122,9 @@ div.searchBar {
 
 .forecast {
   color: #272044;
+  display: flex;
   font-size: 20px;
+  justify-content: space-evenly;
   text-align: center;
 }
 
@@ -131,8 +133,9 @@ div.searchBar {
 }
 
 .forecastTemperatureMax{
-  opacity: 0.8;
-}
+ font-weight: bold; 
+ opacity: 0.8;
+  }
 
 .forecastCondition{
   width: 70px;
