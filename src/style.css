@@ -1,0 +1,136 @@
+body{
+  background-color:#a896d8 ;
+  font-family: "Alkatra", system-ui;
+  min-width: 650px;
+}
+section {
+  background-color: rgb(228, 199, 224);
+  border-radius: 15px;
+  margin: 40px 10px 20px 10px;
+  padding: 30px 30px 10px 30px;
+}
+header{
+  display: flex;
+  justify-content: space-evenly;
+  padding:30px 15px;
+}
+
+h1{
+  text-align: center;
+  font-size: 45px;
+}
+
+.icon{
+  position: relative;
+ left: 20px;
+  max-width: 100px;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+.headerLeftCollum{
+  width:20%;
+}
+
+.headerRightCollum{
+width:80%;
+}
+
+.searcInput {
+  background-color: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  color: #27204478;
+  font-size: 16px;
+  padding: 10px;
+  width: 75%;
+}
+
+.searchButton {
+  background-color: #885df1;
+  border: none;
+  border-radius: 5px;
+  color: #f9f7fe;
+  font-size: 16px;
+  margin-left: 5px;
+  padding: 10px;
+  transition: all 150ms ease-in-out;
+}
+
+.searchButton:hover {
+  opacity: 0.7;
+}
+
+div.searchBar {
+  display: flex;
+  justify-content: stretch;
+}
+
+.dateTop {
+  color: #272044;
+  right: 50px;
+  opacity: 0.8;
+  max-width: 25%;
+  min-width:125px;
+  text-align: center;
+}
+
+.currentWeather {
+  color: #272044;
+  display: flex;
+  justify-content: space-between;
+  padding:20px;
+}
+
+.currentCity {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.currentWeatherDescription {
+  opacity: 0.6;
+}
+
+.currentHumidity,
+.currentWindspeed {
+  font-weight: bold;
+}
+
+.currentTemp{
+display: flex;
+}
+
+.currentTempIcon {
+  font-size: 45px;
+}
+
+.currentTempValue {
+  font-weight: bolder;
+  font-size: 90px;
+}
+
+.currentTempUnit {
+    font-size: 30px;
+}
+
+ul.forecast {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  font-size: 20px;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+ul.forecast li {
+  min-width: 150px;
+  text-align: center;
+}
+
+.authorLinks {
+  font-size: 14px;
+  line-height: 1;
+  padding: 20px;
+  text-align: center;
+}

@@ -3,20 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="src/style.css"/>
     <title>Gobiln Weather Board</title>
   </head>
   <body>
     <section class="messageBoard">
      <header>
-        <img src="src/images/placeholder.png" alt="Weather Goblin Icon" class="icon">
-       <h1>Dat Goblin Weather Board⛅</h1>
+        <div class="headerLeftCollum">
+          <img src="src/images/logo.jpg" alt="Weather Goblin Icon" class="icon">
+          <div class="dateTop" class="dateTop" id="date-top">month 00, year</div>
+        </div>  
+        <div class="headerRghtCollum">
+        <h1>Goblin Weather Board</h1>          
         <form>
-          <span class="dateTop" class="dateTop" id="date-top">month 00, year</span>
-          <input type="search" placeholder="pick a city" required class="searchBar" id="search-bar"/>
-          <input type="submit" value="find da weather" class="searchButton" id="search-button" />
+          <div class="searchBar">
+            <input type="search" placeholder="pick a city" required class="searcInput" id="search-input"/>
+            <input type="submit" value="find da weather" class="searchButton" id="search-button" />
+         </div> 
         </form>
       </header>
+      <hr/>
       <div class="currentWeather">
         <div>
           <h2 class="currentCity" id="current-city">City Name</h2>
@@ -39,17 +48,18 @@
         <li>Fri☀<br />5°c-15°c</li>
         <li>Sat☀<br />6°c-16°c</li>
       </ul>
+      <hr/>
+     <footer class="authorLinks">
+       <p>
+          coded by
+         <a href="https://github.com/Kenzimonster" target="_blank">Kenzi</a>
+          and open-sourced on
+          <a href="https://github.com/Kenzimonster/goblin-weather-board" target="_blank">GitHub</a>
+          and hosted on
+         <a href="https://goblin-weather-board.netlify.app" target="_blank">Netlify</a>
+       </p>
+      </footer> 
     </section>
-    <footer class="authorLinks">
-      <p>
-        coded by
-        <a href="https://github.com/Kenzimonster" target="_blank">Kenzi</a>
-        and open-sourced on
-        <a href="https://github.com/Kenzimonster/goblin-weather-board" target="_blank">GitHub</a>
-        and hosted on
-        <a href="https://goblin-weather-board.netlify.app" target="_blank">Netlify</a>
-      </p>
-    </footer>
   </body>
   <script src="src/index.js"></script>
 </html>
