@@ -14,7 +14,7 @@
     <section class="messageBoard">
      <header>
         <div class="headerLeftCollum">
-          <img src="src/images/logo.jpg" alt="Weather Goblin Icon" class="icon">
+          <img src="src/images/logo.jpg" alt="Weather Goblin Icon" class="icon"/>
           <div class="dateTop" class="dateTop" id="date-top">month 00, year</div>
         </div>  
         <div class="headerRghtCollum">
@@ -36,11 +36,15 @@
           </p>
         </div>
         <div class="currentTemp">
-          <div class="currentTempIcon" id="current-temp-icon">☀</div>
+          <div id="current-temp-icon">
+          <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" alt="condition image" class="currentTempIcon"/>
+          </div>
           <div class="currentTempValue" id="current-temperature-value">00</div>
           <div class="currentTempUnit">°C</div>
         </div>
       </div>
+      
+      <p class="editorsNote">Forcast teplate below not yet functional</p>
       <ul class="forecast">
         <li>Mon☀<br />1°c-11°c</li>
         <li>Tue🌤<br />2°c-12°c</li>

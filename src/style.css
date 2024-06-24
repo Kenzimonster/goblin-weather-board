@@ -33,7 +33,7 @@ h1{
 }
 
 .headerRightCollum{
-width:80%;
+  width:80%;
 }
 
 .searcInput {
@@ -78,7 +78,7 @@ div.searchBar {
 .currentWeather {
   color: #272044;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding:20px;
 }
 
@@ -98,20 +98,25 @@ div.searchBar {
 }
 
 .currentTemp{
-display: flex;
+  display: flex;
 }
 
 .currentTempIcon {
   font-size: 45px;
 }
 
+.currentTempIcon{
+  height:100px;
+}
+
 .currentTempValue {
   font-weight: bolder;
   font-size: 90px;
+  line-height: 100px;
 }
 
 .currentTempUnit {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 ul.forecast {
@@ -132,5 +137,10 @@ ul.forecast li {
   font-size: 14px;
   line-height: 1;
   padding: 20px;
+  text-align: center;
+}
+
+.editorsNote{
+  color:red;
   text-align: center;
 }
