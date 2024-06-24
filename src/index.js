@@ -73,13 +73,13 @@ function handleSearchSubmit(event){
 function formatDay(timestamp){
   let date = new Date(timestamp * 1000);
   let days = [
-    "Sun",
     "Mon",
     "Tue",
     "Wed",
     "Thu",
     "Fri",
-    "Sat"];
+    "Sat",
+    "Sun"];
   return days[date.getDay()];
 }
 
