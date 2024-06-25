@@ -73,13 +73,14 @@ function handleSearchSubmit(event){
 function formatDay(timestamp){
   let date = new Date(timestamp * 1000);
   let days = [
+    "Sun",
     "Mon",
     "Tue",
     "Wed",
     "Thu",
     "Fri",
-    "Sat",
-    "Sun"];
+    "Sat"
+    ];
   return days[date.getDay()];
 }
 
@@ -98,18 +99,17 @@ function citySearch(city) {
 function displayForecast(response){
   let forecastHtml ="";
   response.data.daily.forEach(function(day, index){
-    if (index <6){
+    if (index <=6){
       forecastHtml =  forecastHtml +
       `
-       
         <div class="forecastInner">
           <div class="forecastDate">
             ${formatDay(day.time)}
           </div>
           <img src="${day.condition.icon_url}" alt="condition image" class="forecastCondition"/>
           <div class="forecastTemperatures">
-              <span class="forecastTemperatureMax">${Math.round(day.temperature.maximum)}°</span>
-              <span class="forecastTemperatureMin">${Math.round(day.temperature.minimum)}°</span>
+            <span class="forecastTemperatureMax">${Math.round(day.temperature.maximum)}°</span>
+            <span class="forecastTemperatureMin">${Math.round(day.temperature.minimum)}°</span>
           </div>
         </div>
     
