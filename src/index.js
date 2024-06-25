@@ -43,25 +43,29 @@ function formatDayTime(date) {
 }
 
 function changeInfo(response) {
-  let now = new Date(response.data.time*1000);
-  let currentTemp = Math.round(response.data.temperature.current);
-  let newTemp = document.querySelector("#current-temperature-value");
-  let newHumidity = document.querySelector("#current-city-humidity");  
- let newDescription = document.querySelector("#current-city-description");
- let newWindspeed = document.querySelector("#current-city-windspeed");
-  let cityElement = document.querySelector("#current-city");
-  let descriptionDayTime = document.querySelector("#day-time");
-  let topDate = document.querySelector("#date-top");
-  let conditionImage =document.querySelector("#current-temp-icon")
-  newTemp.innerHTML = currentTemp;
-  newHumidity.innerHTML = response.data.temperature.humidity;
-  newWindspeed.innerHTML = response.data.wind.speed;
-  newDescription.innerHTML = response.data.condition.description;
-  conditionImage.innerHTML = `<img src="${response.data.condition.icon_url}" alt="condition image" class="currentTempIcon"/>`
-  cityElement.innerHTML = response.data.city;
-  descriptionDayTime.innerHTML = formatDayTime(now);
-  topDate.innerHTML = formatTopDate(now);
-  getForecast(response.data.city);
+  if (response.data.city !== undefined) {
+   let now = new Date(response.data.time*1000);
+   let currentTemp = Math.round(response.data.temperature.current);
+   let newTemp = document.querySelector("#current-temperature-value");
+    let newHumidity = document.querySelector("#current-city-humidity");  
+    let newDescription = document.querySelector("#current-city-description");
+    let newWindspeed = document.querySelector("#current-city-windspeed");
+    let cityElement = document.querySelector("#current-city");
+    let descriptionDayTime = document.querySelector("#day-time");
+    let topDate = document.querySelector("#date-top");
+   let conditionImage =document.querySelector("#current-temp-icon")
+   newTemp.innerHTML = currentTemp;
+   newHumidity.innerHTML = response.data.temperature.humidity;
+    newWindspeed.innerHTML = response.data.wind.speed;
+    newDescription.innerHTML = response.data.condition.description;
+    conditionImage.innerHTML = `<img src="${response.data.condition.icon_url}" alt="condition image" class="currentTempIcon"/>`
+    cityElement.innerHTML = response.data.city;
+    descriptionDayTime.innerHTML = formatDayTime(now);
+    topDate.innerHTML = formatTopDate(now);
+    getForecast(response.data.city);
+  }else{
+    alert(`We are very sorry, the goblins could not find the weather for that city. Please check you have the correct spelling of the city and the goblins shall try again to assist you`)
+  }
 }
 
 function handleSearchSubmit(event){
